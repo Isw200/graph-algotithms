@@ -24,10 +24,33 @@ public class Main {
 //
 //        System.out.println();
 
-//        graph.removeVertex('D');
+//        graph.removeVertex('F');
 
-        graph.print();
-
-        System.out.println();
+//        graph.print();
+//
+//        System.out.println();
+//
+//        int sink = graph.findSink();
+//        if (sink == -1) {
+//            System.out.println("No sink");
+//        } else {
+//            System.out.println("Sink: " + graph.vertices[sink].label);
+//        }
+//
+//        System.out.println();
+//
+//        graph.isAcyclic();
+//
+//        System.out.println();
+//
+//        graph.printAllCycles();
+//        
+        // benchmark for isAcyclic
+        long startTime = System.nanoTime();
+        graph.isAcyclic();
+        long endTime = System.nanoTime();
+        long timeElapsed = endTime - startTime;
+        System.out.println("Execution time in nanoseconds: " + timeElapsed);
+        System.out.println("Execution time in milliseconds: " + timeElapsed / 1000000);
     }
 }
