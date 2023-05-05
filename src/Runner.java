@@ -1,4 +1,4 @@
-public class Main {
+public class Runner {
     public static void main(String[] args) {
         DirectedGraph graph = new DirectedGraph(6);
 
@@ -9,10 +9,9 @@ public class Main {
         graph.addVertex('E');
         graph.addVertex('F');
 
-
         graph.readEdgesFromFile("src/edges.txt");
 
-//        graph.print();
+        graph.print();
 //
 //        System.out.println();
 //
@@ -38,19 +37,11 @@ public class Main {
 //        }
 //
 //        System.out.println();
-//
-//        graph.isAcyclic();
-//
-//        System.out.println();
-//
-//        graph.printAllCycles();
-//        
-        // benchmark for isAcyclic
-        long startTime = System.nanoTime();
+
         graph.isAcyclic();
-        long endTime = System.nanoTime();
-        long timeElapsed = endTime - startTime;
-        System.out.println("Execution time in nanoseconds: " + timeElapsed);
-        System.out.println("Execution time in milliseconds: " + timeElapsed / 1000000);
+
+        System.out.println();
+
+        graph.printAllCycles();
     }
 }

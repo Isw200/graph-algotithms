@@ -202,10 +202,10 @@ public class DirectedGraph {
      */
     public boolean isAcyclic() {
         if (vertexCount == 0) {
-            System.out.println("Yes");
+            System.out.println("Acyclic: Yes");
             return true;
         } else if (findSink() == -1) {
-            System.out.println("No");
+            System.out.println("Acyclic: No");
             return false;
         } else {
             // eliminate sink and check again
